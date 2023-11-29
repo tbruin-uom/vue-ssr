@@ -6,11 +6,11 @@ import { renderToString } from 'vue/server-renderer'
 const app = createSSRApp({
   data: () => ({ count: 1 }),
   template: `
-    <HelloWorld msg="Helllllooo World!!!!" />
+    <HelloWorld msg="World!" />
     <button @click="count++">{{ count }}</button>
   `
 })
 
 renderToString(app).then((html) => {
-  console.log(html)
+  print(html)
 })
