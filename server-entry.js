@@ -1,5 +1,5 @@
 // server-entry.js
-const Vue = require('vue');
+const Vue = require('./node_modules/vue');
 const App = require('./components/MyComponent.vue');
 
 module.exports = function createApp() {
