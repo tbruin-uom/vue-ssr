@@ -1,12 +1,16 @@
-// server-entry.js
-// const Vue = require('./node_modules/vue');
-// const App = require('./components/MyComponent.vue');
-
-import Vue from './node_modules/vue';
-import App from './MyComponent.vue';
-
-module.exports = function createApp() {
-  return new Vue({
-    render: (h) => h(App),
+const app = new Vue({
+    data: {
+      message: 'Hello from Vue!',
+    },
+    template: '<div>{{ message }}</div>',
   });
-};
+  
+  // Perform server-side rendering
+  renderer.renderToString(app, (err, html) => {
+    if (err) {
+      console.error(err);
+    } else {
+      // `html` contains the rendered HTML
+      console.log(html);
+    }
+  });
